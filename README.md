@@ -1,2 +1,1 @@
-# theoremailabs
-Lab Website
+# TheoremAILabs
