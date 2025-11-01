@@ -52,6 +52,15 @@
             animation: gradient 15s ease infinite;
         }
 
+        /* Background Grid */
+        #background-grid {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px), 
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+            background-size: 40px 40px; /* Adjust size of squares */
+            opacity: 0.5;
+        }
+
         /* --- Light Theme Overrides --- */
         body.light-theme {
             background-color: #ffffff;
@@ -79,6 +88,12 @@
             background-color: #e5e7eb;
             color: #a855f7;
         }
+        body.light-theme #background-grid {
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.07) 1px, transparent 1px), 
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
+        }
+
 
         /* Countdown Timer Style */
         .timer-box {
@@ -98,7 +113,10 @@
         
     </style>
 </head>
-<body class="text-gray-200 font-sans antialiased">
+<body class="text-gray-200 font-sans antialiased relative">
+    
+    <!-- Background Grid -->
+    <div class="fixed inset-0 z-0" id="background-grid"></div>
 
     <!-- Theme Toggle Button -->
     <div class="fixed top-6 right-6 z-50">
@@ -109,7 +127,7 @@
     </div>
 
     <!-- Main Content -->
-    <main class="min-h-screen flex flex-col items-center justify-center p-6 text-center overflow-hidden">
+    <main class="min-h-screen flex flex-col items-center justify-center p-6 text-center overflow-hidden relative z-10">
         
         <!-- Logo/Title -->
         <h1 class="text-5xl md:text-7xl font-black text-white mb-4 leading-tight" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
