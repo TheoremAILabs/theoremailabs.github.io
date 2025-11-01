@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Theorem AI Labs - Pioneering Artificial Intelligence</title>
+    <title>Theorem AI Labs - Launching Soon</title>
     
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,98 +22,34 @@
                         sans: ['Inter', 'sans-serif'],
                     },
                     keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        },
-                        pulse: {
-                            '0%, 100%': { opacity: '1' },
-                            '50%': { opacity: '0.8' },
-                        },
                         gradient: {
                             '0%': { 'background-position': '0% 50%' },
                             '50%': { 'background-position': '100% 50%' },
                             '100%': { 'background-position': '0% 50%' },
                         },
+                        pulse: {
+                            '0%, 100%': { opacity: '1' },
+                            '50%': { opacity: '0.8' },
+                        },
                     },
                     animation: {
-                        float: 'float 6s ease-in-out infinite',
-                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                         gradient: 'gradient 15s ease infinite',
+                        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                 },
             },
         }
     </script>
 
-    <!-- Custom CSS for Theme, Gradients, and Animations -->
+    <!-- Custom CSS for Theme, Gradients, and Countdown -->
     <style>
         /* Base dark theme styles */
         body {
-            background-color: #0d1117; /* Dark fallback */
+            background-color: #0d1117;
             color: #e6edf3;
             background: linear-gradient(-45deg, #0d1117, #161b22, #0a0c10, #1a0a1f);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
-        }
-
-        /* Simple scrollbar styling */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #0d1117;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #30363d;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #484f58;
-        }
-
-        /* Hero SVG Graphic Styling */
-        .svg-glow {
-            filter: drop-shadow(0 0 15px rgba(236, 72, 153, 0.7)) drop-shadow(0 0 5px rgba(236, 72, 153, 0.5));
-            animation: pulse 3s ease-in-out infinite;
-        }
-        .svg-hand {
-            opacity: 0.8;
-        }
-
-        /* New Card Style */
-        .glass-card {
-            background: rgba(36, 41, 47, 0.5); /* bg-gray-800/50 */
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(139, 148, 158, 0.2); /* gray-700/20 */
-            transition: background 0.3s ease, border 0.3s ease, transform 0.3s ease;
-        }
-        .glass-card:hover {
-            background: rgba(48, 54, 61, 0.7);
-            border-color: rgba(236, 72, 153, 0.5);
-            transform: translateY(-5px);
-        }
-
-        /* New Button Style */
-        .btn-primary {
-            background: linear-gradient(90deg, #ec4899 0%, #a855f7 100%);
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
-        }
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
-        }
-
-        /* Fade-in Animation */
-        .fade-in-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-        }
-        .fade-in-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
         }
 
         /* --- Light Theme Overrides --- */
@@ -123,531 +59,120 @@
             background: #ffffff;
             animation: none;
         }
-        body.light-theme header,
-        body.light-theme #mobile-menu {
-            background-color: rgba(255, 255, 255, 0.8);
-            border-bottom: 1px solid #e5e7eb;
-        }
-        body.light-theme header .text-white {
+        body.light-theme .text-white {
             color: #111827;
-        }
-        body.light-theme header a,
-        body.light-theme #mobile-menu a,
-        body.light-theme #mobile-menu-btn,
-        body.light-theme #theme-toggle-btn-desktop,
-        body.light-theme #theme-toggle-btn-mobile {
-            color: #374151;
-        }
-        body.light-theme header a:hover,
-        body.light-theme #mobile-menu a:hover,
-        body.light-theme #theme-toggle-btn-desktop:hover,
-        body.light-theme #theme-toggle-btn-mobile:hover {
-            color: #a855f7;
-        }
-        body.light-theme #mobile-menu {
-            background-color: #ffffff;
-        }
-        body.light-theme #mobile-menu a:hover {
-            background-color: #f3f4f6;
         }
         body.light-theme .text-pink-400 {
             color: #ec4899;
         }
-        body.light-theme main {
-            background-color: #ffffff;
+        body.light-theme .text-gray-300 {
+            color: #4b5563;
         }
-        body.light-theme #research,
-        body.light-theme #team {
-            background-color: #f9fafb; /* bg-gray-50 */
+        body.light-theme .text-gray-400 {
+            color: #6b7280;
         }
-        body.light-theme #solutions,
-        body.light-theme #contact {
-            background-color: #ffffff;
-        }
-        body.light-theme h1,
-        body.light-theme h2,
-        body.light-theme h3 {
-            color: #111827;
-        }
-        body.light-theme p,
-        body.light-theme li {
+         body.light-theme #theme-toggle-btn {
             color: #374151;
+            background-color: #f3f4f6;
         }
-        body.light-theme .glass-card {
+         body.light-theme #theme-toggle-btn:hover {
+            background-color: #e5e7eb;
+            color: #a855f7;
+        }
+
+        /* Countdown Timer Style */
+        .timer-box {
+            background: rgba(36, 41, 47, 0.5); /* bg-gray-800/50 */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(139, 148, 158, 0.2); /* gray-700/20 */
+            border-radius: 0.75rem; /* rounded-xl */
+            padding: 1.5rem; /* p-6 */
+            width: 100px;
+        }
+        body.light-theme .timer-box {
             background: #ffffff;
             backdrop-filter: none;
             border: 1px solid #e5e7eb;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
-        body.light-theme .glass-card:hover {
-            border-color: #a855f7;
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
-        }
-        body.light-theme .text-gray-400 {
-            color: #6b7280;
-        }
-        body.light-theme .text-gray-200,
-        body.light-theme .text-gray-300 {
-            color: #4b5563;
-        }
-        body.light-theme .text-gray-500 {
-            color: #6b7280;
-        }
-        body.light-theme .border-gray-700 {
-            border-color: #e5e7eb;
-        }
-        body.light-theme .border-gray-800 {
-            border-color: #e5e7eb;
-        }
-        body.light-theme footer {
-            background-color: #f9fafb;
-            border-color: #e5e7eb;
-        }
-        body.light-theme .svg-glow {
-             filter: drop-shadow(0 0 15px rgba(168, 85, 247, 0.5));
-        }
-        body.light-theme .svg-hand {
-            opacity: 1;
-        }
-        body.light-theme .svg-hand-fill {
-            fill: #e9d5ff; /* purple-100 */
-        }
-        body.light-theme .svg-brain-circuit {
-            stroke: #a855f7; /* purple-600 */
-        }
-        body.light-theme .svg-brain-core {
-            fill: #ec4899; /* pink-500 */
-        }
-        body.light-theme ::-webkit-scrollbar-track {
-            background: #f3f4f6;
-        }
-        body.light-theme ::-webkit-scrollbar-thumb {
-            background: #d1d5db;
-        }
-        body.light-theme ::-webkit-scrollbar-thumb:hover {
-            background: #9ca3af;
-        }
+        
     </style>
 </head>
 <body class="text-gray-200 font-sans antialiased">
 
-    <!-- Header & Navigation -->
-    <header class="bg-opacity-80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 shadow-lg">
-        <nav class="container mx-auto max-w-7xl px-6 py-4 flex justify-between items-center">
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-            
-            <!-- Navigation Links (Desktop) -->
-            <div class="hidden md:flex items-center space-x-6">
-                <a href="#home" class="text-gray-300 hover:text-pink-400 transition duration-300">Home</a>
-                <a href="#research" class="text-gray-300 hover:text-pink-400 transition duration-300">Research</a>
-                <a href="#solutions" class="text-gray-300 hover:text-pink-400 transition duration-300">Solutions</a>
-                <a href="#team" class="text-gray-300 hover:text-pink-400 transition duration-300">Team</a>
-                <a href="#contact" class="text-gray-300 hover:text-pink-400 transition duration-300">Contact</a>
-            </div>
-            
-            <!-- Theme Toggle Buttons (Desktop & Mobile) -->
-            <div class="flex items-center">
-                <button id="theme-toggle-btn-desktop" class="hidden md:flex ml-4 text-gray-300 hover:text-pink-400 focus:outline-none transition duration-300 text-xl">
-                    <span id="theme-toggle-sun-desktop">☀️</span>
-                    <span id="theme-toggle-moon-desktop" class="hidden">🌙</span>
-                </button>
-                 <button id="theme-toggle-btn-mobile" class="md:hidden ml-4 text-gray-300 hover:text-pink-400 focus:outline-none transition duration-300 text-xl">
-                    <span id="theme-toggle-sun-mobile">☀️</span>
-                    <span id="theme-toggle-moon-mobile" class="hidden">🌙</span>
-                </button>
-            </div>
-        </nav>
+    <!-- Theme Toggle Button -->
+    <div class="fixed top-6 right-6 z-50">
+        <button id="theme-toggle-btn" class="flex items-center justify-center w-12 h-12 bg-gray-800/50 backdrop-blur-md rounded-full text-gray-300 hover:text-pink-400 focus:outline-none transition duration-300 text-xl shadow-lg border border-gray-700/50">
+            <span id="theme-toggle-sun">☀️</span>
+            <span id="theme-toggle-moon" class="hidden">🌙</span>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <main class="min-h-screen flex flex-col items-center justify-center p-6 text-center overflow-hidden">
         
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden shadow-lg">
-            <a href="#home" class="block px-6 py-4 text-lg font-bold hover:bg-gray-700">Theorem<span class="text-pink-400">AI</span> Labs</a>
-            <a href="#home" class="block px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-pink-400 transition duration-300">Home</a>
-            <a href="#research" class="block px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-pink-400 transition duration-300">Research</a>
-            <a href="#solutions" class="block px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-pink-400 transition duration-300">Solutions</a>
-            <a href="#team" class="block px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-pink-400 transition duration-300">Team</a>
-            <a href="#contact" class="block px-6 py-3 text-gray-300 hover:bg-gray-700 hover:text-pink-400 transition duration-300">Contact</a>
+        <!-- Logo/Title -->
+        <h1 class="text-5xl md:text-7xl font-black text-white mb-4 leading-tight" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+            Theorem<span class="text-pink-400">AI</span> Labs
+        </h1>
+
+        <!-- Subheading -->
+        <p class="text-2xl md:text-3xl text-gray-300 font-light mb-12">
+            Launching Soon
+        </p>
+
+        <!-- Countdown Timer -->
+        <div id="countdown-timer" class="flex flex-wrap justify-center gap-4 sm:gap-8 mb-12">
+            <!-- Days -->
+            <div class="timer-box">
+                <span id="days" class="text-4xl md:text-5xl font-bold text-pink-400">00</span>
+                <span class="block text-sm uppercase text-gray-400 mt-1">Days</span>
+            </div>
+            <!-- Hours -->
+            <div class="timer-box">
+                <span id="hours" class="text-4xl md:text-5xl font-bold text-pink-400">00</span>
+                <span class="block text-sm uppercase text-gray-400 mt-1">Hours</span>
+            </div>
+            <!-- Minutes -->
+            <div class="timer-box">
+                <span id="minutes" class="text-4xl md:text-5xl font-bold text-pink-400">00</span>
+                <span class="block text-sm uppercase text-gray-400 mt-1">Minutes</span>
+            </div>
+            <!-- Seconds -->
+            <div class="timer-box">
+                <span id="seconds" class="text-4xl md:text-5xl font-bold text-pink-400">00</span>
+                <span class="block text-sm uppercase text-gray-400 mt-1">Seconds</span>
+            </div>
         </div>
-    </header>
 
-    <!-- Section 1: Hero -->
-    <section id="home" class="min-h-screen flex items-center relative overflow-hidden pt-24 pb-12">
-        <div class="container mx-auto max-w-7xl px-6 grid md:grid-cols-2 gap-12 items-center">
-            
-            <!-- Hero Content -->
-            <div class="text-center md:text-left z-10">
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight" style="text-shadow: 0 2px 10px rgba(0,0,0,0.3);">
-                    Theorem<span class="text-pink-400">AI</span> Labs
-                </h1>
-                <p class="text-lg sm:text-xl md:text-2xl text-gray-300 mb-4 max-w-xl mx-auto md:mx-0">
-                    Pioneering the Future of Artificial Intelligence.
-                </p>
-                <p class="text-base sm:text-lg text-gray-400 mb-10 max-w-xl mx-auto md:mx-0">
-                    We are a dedicated research lab pushing the boundaries of AI, from foundational models to real-world applied solutions.
-                </p>
-                <a href="#research" class="btn-primary text-white font-semibold px-8 py-3 rounded-full text-lg transition duration-300 shadow-lg inline-block">
-                    Explore Our Work
-                </a>
-            </div>
+        <!-- Footer Notice -->
+        <footer class="absolute bottom-8 text-gray-500">
+            &copy; <script>document.write(new Date().getFullYear())</script> Theorem AI Labs. All rights reserved.
+        </footer>
 
-            <!-- Hero Graphic -->
-            <div class="relative w-full flex items-center justify-center animation-float mt-12 md:mt-0">
-                <svg viewBox="0 0 500 500" class="w-full h-auto max-w-xs sm:max-w-sm md:max-w-lg">
-                    <!-- Definitions for gradients and filters -->
-                    <defs>
-                        <radialGradient id="handGradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                            <stop offset="0%" style="stop-color:#ec4899; stop-opacity:0.6" />
-                            <stop offset="100%" style="stop-color:#a855f7; stop-opacity:0.8" />
-                        </radialGradient>
-                        <linearGradient id="brainCircuitGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" style="stop-color:#f472b6;" />
-                            <stop offset="100%" style="stop-color:#c084fc;" />
-                        </linearGradient>
-                    </defs>
-                    
-                    <!-- Hand Graphic -->
-                    <g class="svg-hand">
-                        <path class="svg-hand-fill" fill="url(#handGradient)" d="M363.6,260.4c-1.3-1.6-3.2-2.8-5.2-3.3c-2.1-0.5-4.3-0.3-6.4,0.6l-26.6,10.9c-2.9,1.2-5.5,2.9-7.7,5.1l-22.1,21.3c-1.4,1.4-3.3,2.2-5.3,2.2h-36.4c-3.1,0-6.1-1.2-8.3-3.4l-23.7-22.6c-1.2-1.2-2.7-2.1-4.3-2.7l-30.8-11.2c-3.2-1.2-6.7-1.3-10,0l-30.8,11.2c-1.6,0.6-3.1,1.5-4.3,2.7l-23.7,22.6c-2.2,2.2-5.2,3.4-8.3,3.4h-36.4c-2,0-3.9-0.8-5.3-2.2l-22.1-21.3c-2.2-2.2-4.8-3.9-7.7-5.1l-26.6-10.9c-2.1-0.9-4.3-1.1-6.4-0.6c-2.1,0.5-3.9,1.7-5.2,3.3c-1.7,2.1-2.4,4.7-2.1,7.3l5.3,47.1c0.5,4.7,2.8,9.1,6.4,12.1l32.2,26.4c2.5,2.1,5.5,3.2,8.6,3.2h217.7c3.1,0,6.1-1.2,8.6-3.2l32.2-26.4c3.6-3,5.9-7.4,6.4-12.1l5.3-47.1C366,265.1,365.3,262.5,363.6,260.4z M106.6,400.9H53.9c-2,0-3.9-0.8-5.3-2.2l-20.9-20.1c-1.1-1-1.7-2.4-1.8-3.9l-3.3-29.3c-0.1-0.7,0.1-1.5,0.6-2l21-20.1c2.2-2.2,5.2-3.4,8.3-3.4h32.1c2,0,3.9,0.8,5.3,2.2l20.9,20.1c1.1,1,1.7,2.4,1.8,3.9l3.3,29.3c0.1,0.7-0.1,1.5-0.6,2l-21,20.1C110.5,400.1,108.6,400.9,106.6,400.9z M174.9,400.9h-53c-2,0-3.9-0.8-5.3-2.2l-20.9-20.1c-1.1-1-1.7-2.4-1.8-3.9l-3.3-29.3c-0.1-0.7,0.1-1.5,0.6-2l21-20.1c2.2-2.2,5.2-3.4,8.3-3.4h32.1c2,0,3.9,0.8,5.3,2.2l20.9,20.1c1.1,1,1.7,2.4,1.8,3.9l3.3,29.3c0.1,0.7-0.1,1.5-0.6,2l-21,20.1C178.8,400.1,176.9,400.9,174.9,400.9z M250,453.9c-10.3,0-18.7-8.4-18.7-18.7v-33.1c0-2.3,1.9-4.2,4.2-4.2h29c2.3,0,4.2,1.9,4.2,4.2v33.1C268.7,445.5,260.3,453.9,250,453.9z M328.1,400.9h-53c-2,0-3.9-0.8-5.3-2.2l-20.9-20.1c-1.1-1-1.7-2.4-1.8-3.9l-3.3-29.3c-0.1-0.7,0.1-1.5,0.6-2l21-20.1c2.2-2.2,5.2-3.4,8.3-3.4h32.1c2,0,3.9,0.8,5.3,2.2l20.9,20.1c1.1,1,1.7,2.4,1.8,3.9l3.3,29.3c0.1,0.7-0.1,1.5-0.6,2l-21,20.1C332,400.1,330.1,400.9,328.1,400.9z M396.4,400.9h-53c-2,0-3.9-0.8-5.3-2.2l-20.9-20.1c-1.1-1-1.7-2.4-1.8-3.9l-3.3-29.3c-0.1-0.7,0.1-1.5,0.6-2l21-20.1c2.2-2.2,5.2-3.4,8.3-3.4h32.1c2,0,3.9,0.8,5.3,2.2l20.9,20.1c1.1,1,1.7,2.4,1.8,3.9l3.3,29.3c0.1,0.7-0.1,1.5-0.6,2l-21,20.1C400.3,400.1,398.4,400.9,396.4,400.9z"/>
-                    </g>
-                    
-                    <!-- Brain Circuit -->
-                    <g class="svg-glow">
-                        <!-- Core -->
-                        <rect x="220" y="100" width="60" height="60" rx="10" class="svg-brain-core" fill="#ec4899"/>
-                        
-                        <!-- Main Circuit Lines -->
-                        <g class="svg-brain-circuit" stroke="url(#brainCircuitGradient)" stroke-width="3" fill="none" stroke-linecap="round">
-                            <path d="M250 100 V 50"/>
-                            <path d="M220 130 H 180 V 80 H 220"/>
-                            <path d="M280 130 H 320 V 80 H 280"/>
-                            <path d="M250 160 V 210"/>
-                            <path d="M220 130 C 170 130, 170 190, 220 190"/>
-                            <path d="M280 130 C 330 130, 330 190, 280 190"/>
-                            <path d="M220 190 H 150 V 230 H 220"/>
-                            <path d="M280 190 H 350 V 230 H 280"/>
-                            <path d="M250 210 H 190 V 250 H 250"/>
-                            <path d="M250 210 H 310 V 250 H 250"/>
-                        </g>
-                        
-                        <!-- Nodes -->
-                        <g class="svg-brain-core" fill="#f472b6">
-                            <circle cx="250" cy="50" r="8"/>
-                            <circle cx="180" cy="80" r="8"/>
-                            <circle cx="320" cy="80" r="8"/>
-                            <circle cx="150" cy="230" r="8"/>
-                            <circle cx="350" cy="230" r="8"/>
-                            <circle cx="190" cy="250" r="8"/>
-                            <circle cx="310" cy="250" r="8"/>
-                        </g>
-                    </g>
-                </svg>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Main Content Wrapper -->
-    <main class="relative z-10">
-
-        <!-- Section 2: Research & Focus Areas -->
-        <section id="research" class="py-20 md:py-32">
-            <div class="container mx-auto max-w-7xl px-6">
-                <div class="text-center mb-16 fade-in-on-scroll">
-                    <span class="text-pink-400 font-semibold uppercase tracking-wider">Our Focus</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Core Research Areas</h2>
-                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-                        We bridge the gap between theoretical research and practical application, creating robust and scalable AI.
-                    </p>
-                </div>
-                
-                <!-- Grid of Services -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    
-                    <!-- Card 1: Generative AI -->
-                    <div class="glass-card p-8 rounded-lg shadow-xl fade-in-on-scroll">
-                        <div class="bg-pink-500 bg-opacity-20 text-pink-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-lg icon-container">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3">Generative AI</h3>
-                        <p class="text-gray-400">
-                            Exploring foundational models for novel content creation, from text and code to images and simulations.
-                        </p>
-                    </div>
-
-                    <!-- Card 2: Large Language Models -->
-                    <div class="glass-card p-8 rounded-lg shadow-xl fade-in-on-scroll" style="transition-delay: 100ms;">
-                        <div class="bg-purple-500 bg-opacity-20 text-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-lg icon-container">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3">Large Language Models</h3>
-                        <p class="text-gray-400">
-                            Developing, training, and fine-tuning LLMs for complex reasoning, understanding, and interaction.
-                        </p>
-                    </div>
-
-                    <!-- Card 3: Robotics -->
-                    <div class="glass-card p-8 rounded-lg shadow-xl fade-in-on-scroll" style="transition-delay: 200ms;">
-                        <div class="bg-pink-500 bg-opacity-20 text-pink-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-lg icon-container">
-                             <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M12 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 18c-2.21 0-4-1.79-4-4v-4H6v-2h3v-1c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v1h3v2h-2v4c0 2.21-1.79 4-4 4zm-2-4c0 1.1.9 2 2 2s2-.9 2-2v-4h-4v4z"/>
-                                <circle cx="9" cy="10" r="1"/>
-                                <circle cx="15" cy="10" r="1"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3">Robotics</h3>
-                        <p class="text-gray-400">
-                            Building intelligent agents that perceive, learn, and act in the physical world autonomously.
-                        </p>
-                    </div>
-
-                    <!-- Card 4: Applied Research -->
-                    <div class="glass-card p-8 rounded-lg shadow-xl fade-in-on-scroll" style="transition-delay: 300ms;">
-                        <div class="bg-purple-500 bg-opacity-20 text-purple-400 w-16 h-16 rounded-lg flex items-center justify-center mb-6 shadow-lg icon-container">
-                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
-                            </svg>
-                        </div>
-                        <h3 class="text-2xl font-semibold text-white mb-3">Applied Research</h3>
-                        <p class="text-gray-400">
-                            Translating breakthrough concepts into tangible prototypes and solutions for complex industry problems.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Section 3: Solutions -->
-        <section id="solutions" class="py-20 md:py-32">
-            <div class="container mx-auto max-w-7xl px-6">
-                 <div class="text-center mb-16 fade-in-on-scroll">
-                    <span class="text-pink-400 font-semibold uppercase tracking-wider">Solutions</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Transforming Industries</h2>
-                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-                        Our research translates into powerful solutions across various domains.
-                    </p>
-                </div>
-                <!-- Example content for solutions -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div class="fade-in-on-scroll">
-                        <img src="https://placehold.co/600x400/161b22/ec4899?text=Solution+Visualization" alt="AI Solution Visualization" class="rounded-lg shadow-xl border border-pink-900/50">
-                    </div>
-                    <div class="space-y-6 fade-in-on-scroll" style="transition-delay: 100ms;">
-                        <h3 class="text-3xl font-semibold text-white">Custom Model Development</h3>
-                        <p class="text-gray-300 leading-relaxed">
-                            We specialize in creating bespoke AI models tailored to your unique data and business objectives. From NLP to Computer Vision, our solutions are built for high performance.
-                        </p>
-                        <ul class="space-y-3 text-gray-300">
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                Generative AI & LLM Integration
-                            </li>
-                            <li class="flex items-center">
-                                <svg class="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                Predictive Analytics & Forecasting
-                            </li>
-                             <li class="flex items-center">
-                                <svg class="w-5 h-5 text-pink-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                                Autonomous Systems & Robotics
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4: Team -->
-        <section id="team" class="py-20 md:py-32">
-            <div class="container mx-auto max-w-7xl px-6">
-                <div class="text-center mb-16 fade-in-on-scroll">
-                    <span class="text-pink-400 font-semibold uppercase tracking-wider">The Minds Behind</span>
-                    <h2 class="text-4xl md:text-5xl font-bold text-white mt-2">Our Team</h2>
-                    <p class="text-lg text-gray-400 mt-4 max-w-2xl mx-auto">
-                        We are a passionate group of researchers, engineers, and visionaries united by a common goal.
-                    </p>
-                </div>
-
-                <!-- Team Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                    
-                    <!-- Team Member 1 -->
-                    <div class="glass-card p-6 rounded-lg shadow-lg text-center fade-in-on-scroll">
-                        <img src="https://placehold.co/400x400/161b22/e9d5ff?text=ER" alt="Team Member 1" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                        <h3 class="text-xl font-semibold text-white">Dr. Evelyn Reed</h3>
-                        <p class="text-pink-400 mb-3">Director of Research</p>
-                        <p class="text-gray-400 text-sm">
-                            Ph.D. in Machine Learning. Focused on...
-                        </p>
-                    </div>
-
-                    <!-- Team Member 2 -->
-                    <div class="glass-card p-6 rounded-lg shadow-lg text-center fade-in-on-scroll" style="transition-delay: 100ms;">
-                        <img src="https://placehold.co/400x400/161b22/e9d5ff?text=AC" alt="Team Member 2" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                        <h3 class="text-xl font-semibold text-white">Alex Chen</h3>
-                        <p class="text-pink-400 mb-3">Head of Engineering</p>
-                        <p class="text-gray-400 text-sm">
-                            Expert in distributed systems and...
-                        </p>
-                    </div>
-
-                    <!-- Team Member 3 -->
-                    <div class="glass-card p-6 rounded-lg shadow-lg text-center fade-in-on-scroll" style="transition-delay: 200ms;">
-                        <img src="https://placehold.co/400x400/161b22/e9d5ff?text=SJ" alt="Team Member 3" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                        <h3 class="text-xl font-semibold text-white">Samira Joshi</h3>
-                        <p class="text-pink-400 mb-3">Senior AI Scientist</p>
-                        <p class="text-gray-400 text-sm">
-                            Specializes in NLP and large language...
-                        </p>
-                    </div>
-
-                    <!-- Team Member 4 -->
-                    <div class="glass-card p-6 rounded-lg shadow-lg text-center fade-in-on-scroll" style="transition-delay: 300ms;">
-                        <img src="https://placehold.co/400x400/161b22/e9d5ff?text=BC" alt="Team Member 4" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                        <h3 class="text-xl font-semibold text-white">Ben Carter</h3>
-                        <p class="text-pink-400 mb-3">Applied Researcher</p>
-                        <p class="text-gray-400 text-sm">
-                            Focuses on computer vision and...
-                        </p>
-                    </div>
-                    
-                    <!-- Team Member 5 -->
-                    <div class="glass-card p-6 rounded-lg shadow-lg text-center fade-in-on-scroll" style="transition-delay: 400ms;">
-                        <img src="https://placehold.co/400x400/161b22/e9d5ff?text=MG" alt="Team Member 5" class="w-32 h-32 rounded-full mx-auto mb-5 border-4 border-gray-700 object-cover">
-                        <h3 class="text-xl font-semibold text-white">Maria Gonzalez</h3>
-                        <p class="text-pink-400 mb-3">Platform Engineer</p>
-                        <p class="text-gray-400 text-sm">
-                            Manages MLOps and cloud infrastructure...
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 5: Contact -->
-        <section id="contact" class="py-20 md:py-32">
-            <div class="container mx-auto max-w-3xl px-6 text-center fade-in-on-scroll">
-                <h2 class="text-4xl md:text-5xl font-bold text-white">Get In Touch</h2>
-                <p class="text-lg text-gray-400 mt-4 mb-8">
-                    We're always looking for new collaborators, challenging problems, and talented individuals.
-                    Let's connect.
-                </p>
-                <a href="mailto:contact@theoremailabs.com" class="btn-primary text-white font-semibold px-8 py-3 rounded-full text-lg transition duration-300 shadow-lg inline-block">
-                    contact@theoremailabs.com
-                </a>
-                
-                <div class="mt-12 text-gray-500">
-                    <p>Theorem AI Labs</p>
-                    <p>PaloAlto</p>
-                </div>
-            </div>
-        </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-800 py-8">
-        <div class="container mx-auto max-w-7xl px-6 text-center text-gray-500">
-            <div class="flex justify-center space-x-6 mb-4">
-                <a href="#" class="hover:text-pink-400 transition">LinkedIn</a>
-                <a href="#" class="hover:text-pink-400 transition">GitHub</a>
-                <a href="#" class="hover:text-pink-400 transition">Twitter</a>
-                <a href="#" class="hover:text-pink-400 transition">Papers</a>
-            </div>
-            <p>&copy; <script>document.write(new Date().getFullYear())</script> Theorem AI Labs. All rights reserved.</p>
-        </div>
-    </footer>
 
     <!-- JavaScript -->
     <script>
-        // --- Mobile Menu Toggle ---
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // --- Smooth Scrolling for All Anchor Links ---
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    // Calculate offset for fixed header
-                    const headerOffset = 80; // Adjust this value based on your header's height
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-                
-                // Close mobile menu on link click
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        });
-
-        // --- Fade-in-on-Scroll Animation ---
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    // Add the 'is-visible' class to trigger the CSS transition
-                    entry.target.classList.add('is-visible');
-                    // Stop observing the element once it's visible
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1 // Trigger when 10% of the element is in view
-        });
-
-        // Observe all elements with the 'fade-in-on-scroll' class
-        document.querySelectorAll('.fade-in-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
         // --- Theme Toggler ---
-        const themeToggleBtnDesktop = document.getElementById('theme-toggle-btn-desktop');
-        const themeToggleBtnMobile = document.getElementById('theme-toggle-btn-mobile');
-        
-        const sunIconDesktop = document.getElementById('theme-toggle-sun-desktop');
-        const moonIconDesktop = document.getElementById('theme-toggle-moon-desktop');
-        const sunIconMobile = document.getElementById('theme-toggle-sun-mobile');
-        const moonIconMobile = document.getElementById('theme-toggle-moon-mobile');
+        const themeToggleBtn = document.getElementById('theme-toggle-btn');
+        const sunIcon = document.getElementById('theme-toggle-sun');
+        const moonIcon = document.getElementById('theme-toggle-moon');
 
         const userTheme = localStorage.getItem('theme');
-        // Check for system preference *for light mode*
         const systemThemeIsLight = window.matchMedia('(prefers-color-scheme: light)').matches;
 
         // Function to apply theme
         const applyTheme = (theme) => {
             if (theme === 'light') {
                 document.body.classList.add('light-theme');
-                sunIconDesktop.classList.add('hidden');
-                moonIconDesktop.classList.remove('hidden');
-                sunIconMobile.classList.add('hidden');
-                moonIconMobile.classList.remove('hidden');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
                 localStorage.setItem('theme', 'light');
             } else {
                 document.body.classList.remove('light-theme');
-                sunIconDesktop.classList.remove('hidden');
-                moonIconDesktop.classList.add('hidden');
-                sunIconMobile.classList.remove('hidden');
-                moonIconMobile.classList.add('hidden');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
                 localStorage.setItem('theme', 'dark');
             }
         };
@@ -659,17 +184,47 @@
             applyTheme('dark'); // Default to dark
         }
 
-        // Event listener for desktop button
-        themeToggleBtnDesktop.addEventListener('click', () => {
+        // Event listener for theme button
+        themeToggleBtn.addEventListener('click', () => {
             const isLight = document.body.classList.contains('light-theme');
             applyTheme(isLight ? 'dark' : 'light');
         });
 
-        // Event listener for mobile button
-        themeToggleBtnMobile.addEventListener('click', () => {
-            const isLight = document.body.classList.contains('light-theme');
-            applyTheme(isLight ? 'dark' : 'light');
-        });
+        // --- Countdown Timer ---
+        function startCountdown() {
+            // Set the launch date (January 1, 2026 at 00:00:00)
+            const launchDate = new Date('2026-01-01T00:00:00Z').getTime();
+
+            const timerInterval = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = launchDate - now;
+
+                if (distance < 0) {
+                    clearInterval(timerInterval);
+                    document.getElementById('countdown-timer').innerHTML = '<h2 class="text-3xl font-bold text-white">We have launched!</h2>';
+                    return;
+                }
+
+                // Time calculations
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Format numbers to always be two digits
+                const format = (num) => num.toString().padStart(2, '0');
+
+                // Update the HTML
+                document.getElementById('days').innerText = format(days);
+                document.getElementById('hours').innerText = format(hours);
+                document.getElementById('minutes').innerText = format(minutes);
+                document.getElementById('seconds').innerText = format(seconds);
+
+            }, 1000);
+        }
+
+        // Start the countdown when the page loads
+        document.addEventListener('DOMContentLoaded', startCountdown);
 
     </script>
 
